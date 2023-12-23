@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+    <script defer src="service-worker.js"></script>
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    
+    
+    <input type="text" readonly id="display" style=" margin-top: 170px; font-size: 60px; background-color: black; border: 0px; color: white; width: 100%; padding-left: 10px;" >
+    <table style="width: 100%; text-align: center; border-collapse: separate;
+    border-spacing: 0 20px;">
+        <tr>
+            <td><button onclick="clearDisplay()" style="background-color: gray;"><p>AC</p></button></td>
+            <td><button onclick="negativo()" style="background-color: gray;"><p>±</p></button></td>
+            <td><button onclick="percentuale()" style="background-color: gray;"><p>%</p></button></td>
+            <td><button onclick="selezionaOperatore('/')" style="background-color: rgb(230, 154, 13);"><p style="font-weight: bold;">÷</p></button></td>
+        </tr>
+   
+        <tr>
+            <td><button onclick="apprendinumero('7')"><p>7</p></button></td>
+            <td><button onclick="apprendinumero('8')"><p>8</p></button></td>
+            <td><button onclick="apprendinumero('9')"><p>9</p></button></td>
+            <td><button onclick="selezionaOperatore('*')" style="background-color: rgb(230, 154, 13);"><p style="font-weight: bold;">×</p></button></td>
+        </tr>
+ 
+        <tr>
+            <td><button onclick="apprendinumero('4')"><p>4</p></button></td>
+            <td><button onclick="apprendinumero('5')"><p>5</p></button></td>
+            <td><button onclick="apprendinumero('6')"><p>6</p></button></td>
+            <td><button onclick="selezionaOperatore('-')" style="background-color: rgb(230, 154, 13);" ><p style="font-weight: bold;">-</p></button></td>
+        </tr>
+
+        <tr>
+            <td><button onclick="apprendinumero('1')"><p>1</p></button></td>
+            <td><button onclick="apprendinumero('2')"><p>2</p></button></td>
+            <td><button onclick="apprendinumero('3')"><p>3</p></button></td>
+            <td><button onclick="selezionaOperatore('+')" style="background-color: rgb(230, 154, 13);" ><p style="font-weight: bold;">+</p></button></td>
+        </tr>
+
+        <tr>
+            <td colspan="2" ><button onclick="apprendinumero('0')" style="margin-left: 11px; width: 100%; border-radius: 100px; text-align: left; padding-left: 20px;"><p>0</p></button></td>
+            <td><button onclick="decimale()"><p>,</p></button></td>
+            <td><button onclick="calcola()" style="background-color: rgb(230, 154, 13);" ><p style="font-weight: bold;">=</p></button></td>
+            
+        </tr>
+    </table>
+    
+    
+</body>
+</html>
